@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css" type="text/css">
+
+<script>
+function required()
+	{
+	var x = document.forms["regform"]["name"].value;
+	var y1 = document.forms["regform"]["day"].value;
+	var y2 = document.forms["regform"]["month"].value;
+	var y3 = document.forms["regform"]["year"].value;
+	var z = document.forms["regform"]["email"].value;
+
+if (x == "") { alert("Please fill Name."); return false; }
+
+if(y1 == "day") {alert("Please choose any Day");return false;}
+if(y2 == "month") {alert("Please choose any Month");return false;}
+if(y3 == "year") {alert("Please choose any year");return false;}
+
+if (z == "") { alert('Please fill email id.'); return false; }
+	
+	}
+
+	</script>
+</head>
+<body>
+	<div class="header">Online Examination Company 
+		<img src="wall.jpg" height="25px" width="40px" alt="logo" border="2px">
+	</div>
+
+<div class="main">
+<div class="menu">
+	<center>
+		<a href="mcsl016_q1a.html">Home</a> <br><br>
+		<a href="mcsl016_q1b.html">Monthly Schedule</a> <br><br>
+		<a href="mcsl016_q1c.html">Syllabus</a> <br><br>
+	<a href="mcsl016_q1d.html">Registration</a>
+	</center>
+</div>
+
+<div class="content">
+	<h1>Registration Page for Examination</h1> <br>
+	<form method="post" name="regform" action="#" onsubmit="required()">
+		Student Name : <input name="name" type="text" onsubmit="required()"><br>
+		Date of Birth :  <select name="day"> <option>day</option>
+			<option>1</option> <option>2</option> <option>3</option>
+		</select> 
+
+		<select name="month"> <option>month</option>
+			<option>JAN</option> <option>FEB</option> <option>MAR</option>
+		</select> 
+
+		<select name="year"> <option>year</option>
+			<option>2001</option> <option>2002</option> <option>2003</option>
+		</select>
+		<br>
+
+		email ID : <input type="text" name="email" onsubmit="required()" > 
+		<br>
+		<input type="submit" value="submit" name="submit">
+	</form>
+
+	<br><br><br>
+</div>
+
+</div> <!-- main ended here ---->
+
+<div class="footer">
+	<center>
+	Author: Rohit &copy; 2019, Reserved.  
+		</ceneter>
+</div>
+</body>
+</html>

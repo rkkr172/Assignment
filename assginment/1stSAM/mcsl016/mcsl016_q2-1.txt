@@ -1,0 +1,80 @@
+5 - CSS Feature (https://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use)
+--------------
+1. CSS Animations and Transitions
+CSS animations are finally available in all major browsers, even in IE (since version 10). There are two ways to create CSS animations. The first is very easy, it is done through animating the changes of CSS properties with the transition declaration. With transitions, you can create hover or mouse down effects, or you can trigger the animation by changing the style of an element with JavaScript. You can see the transition below by hovering over the planet - this will cause the rocket to close in.
+
+The second way for defining animations is a bit more complicated - it involves the description of specific moments of the animation with the code>@keyframe rule. This allows you to have repeating animations that don't depend on user actions or JavaScript to get triggered. Hit the Edit button to see the code.
+csshtml
+
+There is much to learn about CSS animations, and I suggest that you start from this Mozilla Developer Network (MDN) article. If you are curious about browser support, see this compatibility table.
+2. Calculating Values With calc()
+
+Another new and awesome CSS feature is the calc() function. It allows you to do simple arithmetic calculations in CSS. You can use it anywhere a length or a size is required. What is even cooler, is that you can freely mix different units, like percentages and pixels. This makes a lot of layout hacks that you might have used in the past obsolete. The best news? It works in IE9 and up, prefix-free.
+csshtml
+
+Learn more about the calc() function here, or see a compatibility table.
+3. Advanced Selectors
+
+These days, if you assign IDs to elements only so you can style them, you are probably doing it wrong. CSS 2.1 and CSS 3 introduced a number of powerful selectors that can make your layouts cleaner, and your stylesheets more awesome.
+
+These are supported in all major browsers including IE9 and up. Hit Edit to see the source code for the example.
+csshtml
+
+Learn more about these selectors here, or take a look at which browsers support them.
+4. Generated Content and Counters
+
+Generated content is a powerful tool in the hands of developers, made available by the ::before and ::after pseudo elements. This feature lets you use less HTML to achieve the same layouts. This is especially beneficial in cases where you need extra box shadows or other visual elements that would require extra spans or divs. In the end, you get a more minimal and semantically correct HTML.
+
+CSS3 also gives pseudo elements access to counters, which can be incremented with a CSS rule. They can also access attributes from the parent elements that contain them. See the source of the example below.
+csshtml
+
+Generated content is supported everywhere, including IE9 and up.
+5. Gradients
+
+Gradients give web designers the power to create smooth transitions between colors without having to resort to images. CSS gradients also look great on retina displays, because they are generated on the fly. They can be linear or radial, and can be set to repeat. They have been around for some time, but after a few minor syntax changes over the last months, they are finally available nearly everywhere, prefix-free!
+csshtml
+
+See a detailed tutorial here, and a compatibility table here.
+6. Webfonts
+
+Can you imagine that there was a time when we were limited to only a handful of "web-safe" fonts and nothing else? It is hard to believe, given that today we have services like Google Fonts and typekit, which let you embed beautiful fonts by simply including a stylesheet in your page. There are even icon fonts like fontawesome, which contain pretty vector icons, instead of letters or numbers. This was all made possible by the code>@font-face rule, which lets you define the name, characteristics and source files for fonts, which you can later refer in your font/font-family declarations.
+csshtml
+
+Note that due to security limitations in browsers, I was not able to embed a local font in the inline editor above, so I used one from Google Webfonts instead. But you can see a working example here.
+
+With some workarounds, webfonts work on browsers as old as IE6. The two hosted services I mentioned above handle these cases for you, so you don't have to.
+7. Box Sizing
+
+The single biggest cause for headaches for CSS beginners is the box model. The standardization bodies have probably had their reasons, but it doesn't feel at all intuitive to have the CSS width and height of an element affected by its padding and borders. This little (mis)feature breaks layouts and wreaks havoc, but finally there is a way to restore our sanity by using the box-sizing rule. You can set it to border-box, which makes elements behave exactly the way you expect. See for yourself:
+csshtml
+
+Learn more about the box-sizing rule here, or see the compatibility table.
+8. Border Images
+
+The border-image property allows you to display custom designed borders around elements. The borders are contained in a single image (sprite), with each region of that image corresponding to a different part of the border. Here is the image used in the below example.
+csshtml
+
+For a more in-depth look, check out this MDN page and this article on CSS tricks. Border images are supported in all major browsers and IE11.
+9. Media Queries
+
+Media queries are an absolute must if you are serious about web design. They have been around for a while, but are worth a mention, because they have transformed the way we build websites. It used to be that you had a regular website, wide enough to fit the smallest monitor resolution used at the time, and a separate mobile website. These days, we build sites that are responsive and which adapt to the type of device, orientation and resolution.
+
+Media queries are surprisingly easy to use - all you need to do is to enclose CSS styles in a block guarded by a code>@media rule. Each code>@media block is activated when one or more conditions are met. As an example, try resizing this page. I have also included it in the editor below; try removing the the code>@media block to see what happens.
+csshtml
+
+The media query can contain checks for the device resolution and orientation, color depth, pixel density and more. Read an in-depth article here, and see the compatibility table.
+10. Multiple Backgrounds
+
+With multiple backgrounds, designers can achieve very interesting effects. They can stack different images as backgrounds of the same element. Each image (or layer) can be moved and animated independently, like you can see in the demo below (try hovering over the image with your mouse). All background-releated CSS rules can now take a comma-delimited list of properties, each for the specific background image:
+csshtml
+
+For more information on multiple backgrounds, see here. Browser support is very good - all recent versions support the rule (see the table).
+11. CSS Columns
+
+Column-based layouts were notoriously difficult to pull off in CSS. It usually involved using JavaScript or server-side processing that splits the content into different elements. This is unnecessarily complicated and takes precious development time away from what really matters. Fortunately, now there is a way around this by using the CSS columns rule:
+csshtml
+
+There is good support for this rule, although it still requires prefixes. Where things break down is with the support of some of the other column-related rules and differences between browsers in handling corner cases.
+12. CSS 3D Transforms
+
+There is nothing more flashy and full with eye-candy than an impressive 3D CSS demo. Although its utility outside of demos or portfolio sites is questionable, 3D CSS offers some powerful features to designers and developers that can win the hearts of users if done with good measure
